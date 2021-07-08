@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div id="prefdata-load" v-if="$fetchState.error || $fetchState.error">
+    <div id="prefdata-load" v-if="$fetchState.pending || $fetchState.error">
       <v-progress-circular v-if="$fetchState.pending" indeterminate />
       <p v-if="$fetchState.error">
         データの取得に失敗しました。リロードしてください。
@@ -52,11 +52,6 @@ export default {
 
 <style>
 #prefdata-load {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
   margin: 2em auto;
   padding: 1em;
   width: 90%;
