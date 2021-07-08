@@ -63,11 +63,4 @@ export default {
   cursor: pointer;
   position: relative;
 }
-.v-progress-circular {
-  color: #007bbb;
-}
-#message {
-  color: #828c9a;
-  font-weight: normal;
-}
 </style>

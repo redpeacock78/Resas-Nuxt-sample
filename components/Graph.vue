@@ -4,7 +4,7 @@
       <v-card-title id="graph-title">人口構成(総人口)</v-card-title>
       <v-card-text id="graph-container">
         <v-progress-circular v-if="loading" indeterminate />
-        <div id="message">
+        <div id="graph-message">
           <p v-if="!loaded && !loading && !selectableCount && !load_failed">
             都道府県を選択してください。
           </p>
@@ -88,11 +88,11 @@ export default {
   color: #828c9a;
   font-weight: normal;
 }
-.v-progress-circular {
-  color: #007bbb;
-}
-#message {
+#graph-message {
   color: #828c9a;
   font-weight: normal;
+}
+.v-progress-circular {
+  color: #007bbb;
 }
 </style>
