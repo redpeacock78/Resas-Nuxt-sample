@@ -5,6 +5,7 @@
 Demo(Netlify): https://elated-lamport-8e51c0.netlify.app/  
 ![demo image](https://github.com/redpeacock78/Resas-Nuxt-sample/blob/master/demo.gif)
 
+
 This Page uses Resas API and Chart.js.
 - [RESAS API](https://opendata.resas-portal.go.jp/)
 - [RESAS API Documents](https://opendata.resas-portal.go.jp/docs/api/v1/index.html)
