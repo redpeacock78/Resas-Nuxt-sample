@@ -3,7 +3,7 @@
 **Graphs of total population trends for each prefecture are displayed using Resas API and Chart.js.**  
 
 Demo(Netlify): https://elated-lamport-8e51c0.netlify.app/  
-[![Image from Gyazo](https://i.gyazo.com/dc7f1ff342bfd680dbcb137c9392a551.gif)](https://gyazo.com/dc7f1ff342bfd680dbcb137c9392a551)
+![demo](https://gyazo.com/dc7f1ff342bfd680dbcb137c9392a551.gif)
 
 This Page uses Resas API and Chart.js.
 - [RESAS API](https://opendata.resas-portal.go.jp/)
