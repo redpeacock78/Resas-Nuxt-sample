@@ -1,28 +1,21 @@
-require('dotenv').config();
-const { API_KEY } = process.env;
+require('dotenv').config()
+const { API_KEY } = process.env
 module.exports = {
   head: {
     title: 'resas-nuxt',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   env: {
-    API_KEY
+    API_KEY,
   },
   loading: { color: '#3B8070' },
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/vuetify'
-  ],
-  plugins: [
-    '~/plugins/axios'
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/vuetify'],
+  plugins: ['~/plugins/axios'],
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -30,10 +23,9 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
-    }
-  }
+    },
+  },
 }
-
