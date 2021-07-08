@@ -1,6 +1,6 @@
 <template>
   <div id="checkbox-parent">
-    <v-card-title class="checkbox-title">都道府県</v-card-title>
+    <v-card-title id="checkbox-title">都道府県</v-card-title>
     <v-card-text id="checkboxes">
       <v-checkbox
         v-for="(item, index) in prefData.result"
@@ -49,7 +49,7 @@ export default {
   display: flex;
   flex-flow: row wrap;
 }
-.checkbox-title {
+#checkbox-title {
   color: #828c9a;
   font-weight: normal;
 }
