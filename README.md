@@ -32,7 +32,7 @@ $ npm run generate
 ```
 
 ## Technology used
-### Fremework
+### Framework
 - [Nuxt.js](https://nuxtjs.org/)(2.15.7)
 - [Vuetify](https://vuetifyjs.com/)(2.5.6)
 ### Linter
