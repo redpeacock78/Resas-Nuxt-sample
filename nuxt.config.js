@@ -1,7 +1,6 @@
+require('dotenv').config();
+const { API_KEY } = process.env;
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'resas-nuxt',
     meta: [
@@ -13,18 +12,12 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress bar color
-  */
+  env: {
+    API_KEY
+  },
   loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
