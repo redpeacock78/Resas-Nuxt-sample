@@ -8,7 +8,8 @@
         class="checkbox-items"
         :label="item.prefName"
         v-bind:value="item"
-        v-model="prefCodes"
+        v-model="checkedPrefData"
+        @change="check"
       />
     </v-card-text>
   </div>
@@ -19,8 +20,13 @@ export default {
   props: ['prefData'],
   data() {
     return {
-      prefCodes: [],
+      checkedPrefData: [],
     }
+  },
+  methods: {
+    check() {
+      this.$emit('updatePrefData', this.checkedPrefData)
+    },
   },
 }
 </script>
