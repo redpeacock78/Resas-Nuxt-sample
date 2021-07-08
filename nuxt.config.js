@@ -16,6 +16,12 @@ module.exports = {
     API_KEY
   },
   loading: { color: '#3B8070' },
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  plugins: [
+    '~/plugins/axios'
+  ],
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
