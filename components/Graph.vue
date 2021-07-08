@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div id="checkbox_parent">
-      <v-card-title class="checkbox-title">人口構成(総人口)</v-card-title>
-      <v-card-text class="chart-container">
+    <div id="graph-parent">
+      <v-card-title id="graph-title">人口構成(総人口)</v-card-title>
+      <v-card-text id="graph-container">
         <v-progress-circular v-if="loading" indeterminate />
         <div id="message">
           <p v-if="!loaded && !loading && !selectableCount && !load_failed">
@@ -73,3 +73,26 @@ export default {
   },
 }
 </script>
+
+<style>
+#graph-parent {
+  margin: 2em auto;
+  padding: 1em;
+  width: 90%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px #ccc;
+  text-align: center;
+}
+#graph-title {
+  color: #828c9a;
+  font-weight: normal;
+}
+.v-progress-circular {
+  color: #007bbb;
+}
+#message {
+  color: #828c9a;
+  font-weight: normal;
+}
+</style>
