@@ -1,9 +1,14 @@
 <template>
   <div>
     <div id="graph-parent">
-      <v-card-title id="graph-title">人口構成(総人口)</v-card-title>
-      <v-card-text id="graph-container">
-        <v-progress-circular v-if="loading" indeterminate />
+      <div id="graph-title">人口構成(総人口)</div>
+      <div id="graph-container">
+        <vue-loading
+          v-if="loading"
+          type="spin"
+          color="#007bbb"
+          :size="{ width: '50px', height: '50px' }"
+        ></vue-loading>
         <div id="graph-message">
           <p v-if="!loaded && !loading && !selectableCount && !load_failed">
             都道府県を選択してください。
@@ -16,7 +21,7 @@
           </p>
         </div>
         <line-chart v-if="loaded" :chart-data="chartdata" />
-      </v-card-text>
+      </div>
     </div>
   </div>
 </template>
@@ -78,15 +83,28 @@ export default {
 #graph-parent {
   margin: 2em auto;
   padding: 1em;
-  width: 90%;
+  width: 87.5%;
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 1px 1px 2px #ccc;
   text-align: center;
 }
 #graph-title {
+  display: flex;
+  padding: 16px;
   color: #828c9a;
+  font-size: 1.25rem;
   font-weight: normal;
+  letter-spacing: 0.0125em;
+  line-height: 2rem;
+}
+#graph-container {
+  padding: 16px;
+  padding-top: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: 0.0071428571em;
 }
 #graph-message {
   color: #828c9a;
