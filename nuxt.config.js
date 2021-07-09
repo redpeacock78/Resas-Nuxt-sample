@@ -14,8 +14,8 @@ module.exports = {
     API_KEY,
   },
   loading: { color: '#3B8070' },
-  modules: ['@nuxtjs/axios', '@nuxtjs/vuetify'],
-  plugins: ['~/plugins/axios'],
+  modules: ['@nuxtjs/axios'],
+  plugins: ['~/plugins/axios', { src: '~/plugins/VueLoading', ssr: false }],
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
