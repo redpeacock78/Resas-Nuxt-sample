@@ -9,7 +9,6 @@
       >
         <input
           type="checkbox"
-          class="checkbox-items"
           :id="'pref' + index"
           :value="item"
           v-model="checkedPrefData"
