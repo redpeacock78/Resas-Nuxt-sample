@@ -2,7 +2,12 @@
   <div>
     <Header />
     <div id="prefdata-load" v-if="$fetchState.pending || $fetchState.error">
-      <v-progress-circular v-if="$fetchState.pending" indeterminate />
+      <vue-loading
+        v-if="$fetchState.pending"
+        type="spin"
+        color="#007bbb"
+        :size="{ width: '50px', height: '50px' }"
+      ></vue-loading>
       <p v-if="$fetchState.error">
         データの取得に失敗しました。リロードしてください。
       </p>
@@ -51,6 +56,10 @@ export default {
 </script>
 
 <style>
+* {
+  padding: 0;
+  margin: 0;
+}
 #prefdata-load {
   margin: 2em auto;
   padding: 1em;
