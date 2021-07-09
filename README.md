@@ -34,7 +34,6 @@ $ npm run generate
 ## Technology used
 ### Framework
 - [Nuxt.js](https://nuxtjs.org/)(2.15.7)
-- [Vuetify](https://vuetifyjs.com/)(2.5.6)
 ### Linter
 - [eslint](https://eslint.org/)(4.19.1)
 - [prettier](https://prettier.io/)(2.3.2)
