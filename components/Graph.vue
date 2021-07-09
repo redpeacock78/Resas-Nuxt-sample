@@ -20,7 +20,7 @@
             グラフデータの取得に失敗しました。再度選択し直してください。
           </p>
         </div>
-        <line-chart v-if="loaded" :chart-data="chartdata" />
+        <line-chart v-if="loaded && !loading" :chart-data="chartdata" />
       </div>
     </div>
   </div>
