@@ -110,7 +110,4 @@ export default {
   color: #828c9a;
   font-weight: normal;
 }
-.v-progress-circular {
-  color: #007bbb;
-}
 </style>
